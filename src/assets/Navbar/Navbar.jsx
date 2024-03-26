@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./navbarStyles.css";
 
 const Navbar = () => {
@@ -5,12 +6,12 @@ const Navbar = () => {
     <>
       <div className="navbar bg-white text-black px-16">
         <div className="navbar-start">
-          <a className="p-2">
+          <Link to='/arc/' className="p-2">
             <img
-              className="w-48 h-12 object-cover "
-              src="/ar-logo-header.png"
+              className="w-28 lg:w-48 h-12 object-cover "
+              src="public/ar-logo-header.png"
             />
-          </a>
+          </Link>
         </div>
         <div className="navbar-center">
           <div className="main">
