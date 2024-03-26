@@ -1,0 +1,121 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap");
+
+/* Core Styles */
+*,
+*:before,
+*:after {
+  @apply box-border m-0 p-0;
+}
+
+section {
+  @apply text-center px-[1em] py-[1.5em];
+}
+.header {
+  @apply w-[960px] text-center mx-auto my-[1em] p-[1em] border-b-2 border-b-[rgba(29,29,29,0.6)] border-solid;
+}
+.header h1 {
+  @apply font-semibold uppercase mb-[0.25em];
+}
+.header a {
+  @apply no-underline text-[#1d1d1d] font-bold transition-all duration-[0.35s] ease-[ease-in-out] hover:text-[#e99041];
+}
+.row {
+  @apply max-w-[960px] w-full mx-auto my-0;
+}
+.heading {
+  @apply mb-[1em];
+}
+.figure {
+  @apply [background:#1d1d1d] inline-block max-w-[580px] min-w-[230px] overflow-hidden relative text-center w-full m-2.5;
+}
+.figure * {
+  @apply [-webkit-transition:all_0.35s_ease] transition-all duration-[0.35s] ease-[ease];
+}
+
+/* Section 6 - Hover Effect 6 */
+.section-6 {
+  @apply [background:#000000] text-[#efefef];
+}
+.section-6 .figure {
+  @apply text-left [background:#000000] text-base before:left-0 before:top-0 after:right-0 after:bottom-0;
+}
+.section-6 .figure img {
+  @apply relative max-w-full align-top;
+}
+.section-6 figcaption {
+  @apply absolute w-full h-full z-[1] opacity-0 px-[30px] py-5 right-0 top-0;
+}
+.section-6 .figure figcaption:before,
+.section-6 .figure figcaption:after {
+  @apply w-px h-0;
+}
+.section-6 .figure figcaption:before {
+  @apply right-0 top-0;
+}
+.section-6 .figure figcaption:after {
+  @apply left-0 bottom-0;
+}
+.section-6 .figure h3,
+.section-6 .figure p {
+  @apply leading-[1.5em];
+}
+.section-6 .figure h3 {
+  @apply font-bold uppercase mt-0 mb-[5px] mx-0;
+}
+.section-6 .figure p {
+  @apply text-[0.8em] font-normal mt-0 mb-[15px] mx-0;
+}
+.section-6 .figure a {
+  @apply absolute z-[1] right-0 inset-y-0;
+}
+.section-6 .figure:before,
+.section-6 .figure:after,
+.section-6 .figure figcaption:before,
+.section-6 .figure figcaption:after {
+  @apply absolute content-[''] bg-[#efefef] z-[1] [-webkit-transition:all_0.35s_ease-in] transition-all duration-[0.35s] ease-[ease-in] opacity-80;
+}
+
+.section-6 .figure:hover img,
+.section-6 .figure.hover img {
+  @apply opacity-40;
+}
+.section-6 .figure:hover figcaption:before,
+.section-6 .figure.hover figcaption:before,
+.section-6 .figure:hover figcaption:after,
+.section-6 .figure.hover figcaption:after {
+  @apply h-full;
+}
+.section-6 .figure:hover figcaption {
+  @apply opacity-100;
+}
+.section-6 .figure:hover:before,
+.section-6 .figure.hover:before,
+.section-6 .figure:hover:after,
+.section-6 .figure.hover:after {
+  @apply w-full;
+}
+.section-6 .figure:hover:before,
+.section-6 .figure.hover:before,
+.section-6 .figure:hover:after,
+.section-6 .figure.hover:after,
+.section-6 .figure:hover figcaption:before,
+.section-6 .figure.hover figcaption:before,
+.section-6 .figure:hover figcaption:after,
+.section-6 .figure.hover figcaption:after {
+  @apply opacity-10;
+}
+
+.swiper-pagination-bullet {
+  background-color: white; /* Cambia el color de fondo a blanco */
+  opacity: 0.5; /* Opcional: ajusta la opacidad si deseas */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white; /* Cambia el color de fondo a blanco */
+  opacity: 1; /* Opcional: ajusta la opacidad si deseas */
+}

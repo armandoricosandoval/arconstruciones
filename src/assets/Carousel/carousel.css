@@ -1,0 +1,22 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+.swiper {
+  @apply w-full py-[50px];
+}
+.swiper-slide {
+  @apply bg-center bg-cover w-[300px] h-[300px];
+}
+.swiper-slide img {
+  @apply block w-full;
+}
+
+.autoplay-progress {
+  @apply absolute z-10 w-12 h-12 flex items-center justify-center font-[bold] text-[color:var(--swiper-theme-color)] right-4 bottom-4;
+}
+.autoplay-progress svg {
+  @apply [--progress:0] absolute z-10 w-full h-full stroke-[4px] stroke-[color:var(--swiper-theme-color)] fill-none [stroke-dashoffset:calc(125.6_*_(1_-_var(--progress)))] [stroke-dasharray:125.6] -rotate-90 left-0 top-0;
+}

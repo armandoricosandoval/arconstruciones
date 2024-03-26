@@ -1,0 +1,22 @@
+.main {
+  @apply w-full h-10 flex justify-center items-center text-black;
+}
+ol {
+  @apply flex text-[1.2rem];
+  list-style: none;
+}
+ol li {
+  @apply relative transition-all duration-[0.2s] delay-[0.2s] mx-5 my-0 px-5 py-2.5 before:content-[""] before:absolute before:w-full before:h-0.5 before:transition-all before:duration-[0.2s] before:left-0 before:bottom-0 hover:before:bottom-10;
+}
+ol li a {
+  @apply text-[black] no-underline;
+}
+ol li::before {
+  background: transparent;
+}
+ol li:hover::before {
+  background: #ecebff;
+}
+ol li:hover {
+  background: #ecebff;
+}
